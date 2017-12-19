@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Sample3</title>
+<script type="text/javascript">
+    function Sample3(){
+        for(var i=0;i<Sample3_form.radio.length;i++){
+            if(Sample3_form.radio[i].checked == true){
+                var hoge = Sample3_form.radio[i].value;
+                alert(hoge+"が選択されています");
+            }
+        }
+    }
+</script>
+</head>
+ 
+<body>
+    <form name="Sample3_form" action="form_sample3.html">
+        <input type="radio" name="radio" value="ラジオ1"/>ラジオ1<br>
+        <input type="radio" name="radio" value="ラジオ2"/>ラジオ2<br>
+        <input type="radio" name="radio" value="ラジオ3"/>ラジオ3<br>
+        <input type="button" value="Sample3" onclick="Sample3()">
+    </form>
+</body>
+</html>

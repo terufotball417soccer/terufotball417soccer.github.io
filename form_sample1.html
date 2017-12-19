@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Sample1</title>
+<script type="text/javascript">
+    function Sample1(){
+        var search = Sample1_form.textbox.value;  //テキストエリアの値を取得
+        document.getElementById('search_word').textContent ='[' + search +']を検索中です…';
+
+        //alert(""+ hoge +"が入力されました。");
+    }
+</script>
+</head>
+ 
+<body>
+<form name="Sample1_form" action="form_sample1.html">
+<input type="text" name="textbox">
+<input type="button" value="検索" onclick="Sample1()">
+</form>
+<p id="search_word"></p>
+</body>
+</html>
