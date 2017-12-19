@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>お寿司ネタ~</title>
+     <style>
+      
+     </style>
+</head>
+<body>
+
+     <form>
+               <label for="osusi">お寿司メニュー:</label>
+         　　　<select name="osusi" id="osusi">
+               <option value="">お寿司のネタを選択してください</option>
+               <option value="maguro.html"/>マグロ</option>
+               <option value="salmon.html"/>サーモン</option>
+               <option value="engawa.html">えんがわ</option>
+               <option value="octcat.html">オクトキャット</option>
+          </select>
+     </form>
+     <img src="https://terufotball417soccer.github.io/オクト.png" alt="オクトキャット" width=30% height=30%>
+
+     <script>
+        document.addEventListener('DOMContentLoaded',function(){
+                   document.getElementById('osusi').addEventListener('change',function(){
+                       location.href = this.value;
+                   });
+               });
+     </script>
+ 　　　<h3>Githubの使い方</h3>
+       <ul>
+           <li>Githubでリポジトリを作成（git init）、または複製（git clone）する</li>
+           <li>ファイルの作成、編集を行う</li>
+           <li>ファイルの作成/変更/削除をgitのインデックスに追加する(git add)</li>
+           <li>変更結果をローカルリポジトリにコミットする（git commit）</li>
+           <li>ローカルリポジトリをプッシュしてリモートリポジトリへ反映させる(git push)</li>
+        </ul>
+       </li>
+</body>
+</html>
