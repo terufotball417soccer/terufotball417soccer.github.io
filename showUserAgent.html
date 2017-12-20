@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    
+    var nvUA = navigator.userAgent;
+    var cutSt,cutEd;  //バージョンを切り出す位置情報を取得
+    var bwVer;    //バージョンを格納
+    
+    //Operaか調べる
+    if ( nvUA.indexOf("Opera") != -1 )
+    {
+      //開始位置の指標「Version」の位置を取得、終了位置は文字列長
+      cutSt = nvUA.indexOf("Version");
+      cutEd   = nvUA.length;
+      
+      //バージョンの切り出し
+      bwVer = nvUA.substring(cutSt+8,cutEd);
+      
+      //頭に「Opera」を付けてバージョンを書き出す
+      document.write("Opera "+ bwVer);
+    }
+    
+    //「Safari」が含まれるか調べる
+    if ( nvUA.indexOf("Safari") != -1 )
+    {
+      //「Chrome」が含まれるか調べる
+      if ( nvUA.indexOf("Chrome") != -1 )
+      {
+        cutSt = nvUA.indexOf("Chrome");
+        cutEd   = nvUA.indexOf(" ",cutSt);
+        
+        bwVer =nvUA.substring(cutSt+7,cutEd);
+        
+        document.write("お使いのブラウザは" + "Google Chromeで " +"バージョンは" +bwVer + "ですね。");
+      }
+      else
+      {
+        cutSt = nvUA.indexOf("Version");
+        cutEd   = nvUA.indexOf(" ",cutSt);
+        
+        bwVer = nvUA.substring(cutSt+8,cutEd);
+        
+        document.write("Safari "+bwVer);
+      }
+    }
+    
+    </script>
+</html>
