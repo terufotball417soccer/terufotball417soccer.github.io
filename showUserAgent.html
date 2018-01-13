@@ -4,64 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ブラウザの判定</title>     
+    
 </head>
+<body>
 <form>
-    <label for="osusi">お寿司メニュー：</label><p></p>
-    <select id="osusi" name="osusi">
-    <option value="">お寿司のネタを選択してください。</option>
-    <option value="maguro.html">マグロ</option>
-    <option value="salmon.html">サーモン</option>
-    <option value="engawa.html">えんがわ</option>
-    <option value="octcat.html">オクトキャット</option>
-    <option value="images.html">お気に入りの画像</option>
-    <option value="showUserAgent.html">ブラウザの判定</option>
-    <option value="imputobox課題.html"/>タイマー</option>
-    <option value="メソッド冬休み.html"/>メソッドの使い方</option>
-    <option value="console課題.html"/>consoleオブジェクト</option>
-    </select>
-</form>
-    var nvUA = navigator.userAgent;
-    var cutSt,cutEd;  //バージョンを切り出す位置情報を取得
-    var bwVer;    //バージョンを格納
-    
-    //Operaか調べる
-    if ( nvUA.indexOf("Opera") != -1 )
-    {
-      //開始位置の指標「Version」の位置を取得、終了位置は文字列長
-      cutSt = nvUA.indexOf("Version");
-      cutEd   = nvUA.length;
-      
-      //バージョンの切り出し
-      bwVer = nvUA.substring(cutSt+8,cutEd);
-      
-      //頭に「Opera」を付けてバージョンを書き出す
-      document.write("Opera "+ bwVer);
-    }
-    
-    //「Safari」が含まれるか調べる
-    if ( nvUA.indexOf("Safari") != -1 )
-    {
-      //「Chrome」が含まれるか調べる
-      if ( nvUA.indexOf("Chrome") != -1 )
-      {
-        cutSt = nvUA.indexOf("Chrome");
-        cutEd   = nvUA.indexOf(" ",cutSt);
+                        <label for="osusi">お寿司メニュー：</label><p></p>
+                        <select id="osusi" name="osusi">
+                        <option value="">お寿司のネタを選択してください。</option>
+                        <option value="maguro.html">マグロ</option>
+                        <option value="salmon.html">サーモン</option>
+                        <option value="engawa.html">えんがわ</option>
+                        <option value="octcat.html">オクトキャット</option>
+                        <option value="images.html">お気に入りの画像</option>
+                        <option value="showUserAgent.html">ブラウザの判定</option>
+                <option value="inputobox課題.html"/>タイマー</option>
+                <option value="メソッド冬休み.html"/>メソッドの使い方</option>
+                <option value="console課題.html"/>consoleオブジェクト</option>
+                </select>
+            </form>
+
+            <center><h1>ブラウザ判定</h1></center>
         
-        bwVer =nvUA.substring(cutSt+7,cutEd);
+            </br>
+            <p id="userAgent"></p>
         
-        document.write("お使いのブラウザは" + "Google Chromeで " +"バージョンは" +bwVer + "ですね。");
-      }
-      else
-      {
-        cutSt = nvUA.indexOf("Version");
-        cutEd   = nvUA.indexOf(" ",cutSt);
+            <h2>お使いのブラウザ</h2>
+            <script>
         
-        bwVer = nvUA.substring(cutSt+8,cutEd);
+                var nvName = navigator.appName;
+                var nvVersion = navigator.appVersion;
+                var nvUsAgent = navigator.userAgent;
         
-        document.write("Safari "+bwVer);
-      }
-    }
+                //１．Internet Explorerか調べる
+                if (nvName.indexOf("Internet Explorer") > -1) {
+                    document.write("Internet Explorer");
+                }
+                else {
+                    //２．Operaか調べる
+                    if (nvName.indexOf("Opera") > -1) {
+                        document.write("Opera");
+                    }
+                    else {
+                        //３．「Safari」が含まれるか調べる
+                        if (nvVersion.indexOf("Safari") > -1) {
+                            //４．SafariかChromeを見分ける
+                            if (nvVersion.indexOf("Chrome") > -1) {
+                                document.write("Google Chrome");
+                            }
+                            else {
+                                document.write("Safari");
+                            }
+                        }
+                        else {
+                            //５．FireFoxかその他のブラウザかを見分ける
+                            if (nvUsAgent.indexOf("Firefox") > -1) {
+                                document.write("FireFox");
+                            }
+                            else {
+                                document.write("その他のブラウザ");
+                            }
+                        }
+                    }
+                }
+            </script>
+            <br>
+            <br>
+            <h2>お使いのバージョン</h2>
+            <span id="appVersion"></span>
+
+            <script>
+                    document.getElementById("appVersion").innerHTML = navigator.appVersion;
+                </script>
     <script>
                 document.addEventListener('DOMContentLoaded',function(){
                 document.getElementById('osusi').addEventListener('change',function(){
