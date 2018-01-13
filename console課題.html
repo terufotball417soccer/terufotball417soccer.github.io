@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>consoleオブジェクトの使い方</title>
+    
+</head>
+<body>
+        <form>
+                <label for="osusi">お寿司メニュー：</label><p></p>
+                <select id="osusi" name="osusi">
+                <option value="">お寿司のネタを選択してください。</option>
+                <option value="maguro.html">マグロ</option>
+                <option value="salmon.html">サーモン</option>
+                <option value="engawa.html">えんがわ</option>
+                <option value="octcat.html">オクトキャット</option>
+                <option value="images.html">お気に入りの画像</option>
+                <option value="showUserAgent.html">ブラウザの判定</option>
+        <option value="imputobox課題.html"/>タイマー</option>
+        <option value="メソッド冬休み.html"/>メソッドの使い方</option>
+        <option value="console課題.html"/>consoleオブジェクト</option>
+    </select>
+</form>
+    
+    <center><h1>consoleオブジェクトの使い方</h1></center>
+    <p>ここではconsoleオブジェクトの使い方について説明して行きたいと思います！</p>
+    <p>consoleオブジェクトと聞くと授業でよく使うconsole.logが一番最初に思いつくんじゃないでしょうか！
+        <br>実はconsoleオブジェクトはconsole.logを含めてもあるんです！
+        <br>19個のconsoleオブジェクトは以下の通りです。
+        <br>ざっくりと説明もあります。</p>
+    <h2>consoleオブジェクト一覧</h2>
+    
+    <center><table border="4">
+        <tr><th>メソッド名</th><th>説明</th></tr>
+        <tr><td>log</td><td>コンソールに「ログメッセージ」を出力</td></tr>
+        <tr><td>info</td><td>コンソールに「情報メッセージ」を出力</td></tr>
+        <tr><td>warn</td><td>コンソールに「警告メッセージ」を出力</td></tr>
+        <tr><td>error</td><td>コンソールに「エラーメッセージ」を出力</td></tr>
+        <tr><td>dir</td><td>コンソールに「オブジェクト」を出力<br>プロパティ名と中身の値をまとめて確認できる</td></tr>
+        <tr><td>dirxml</td><td>コンソールに「DOMオブジェクト」を出力<br>DOMツリーの構造をまとめて確認できる</td></tr>
+        <tr><td>count</td><td>コンソールに「デバッグメッセージ」と「累計実行回数」を出力</td></tr>
+        <tr><td>assert</td><td>診断結果が偽の場合コンソールに「エラーメッセージ」を出力</td></tr>
+        <tr><td>trace</td><td>コンソールに「現在の関数スタックの状態」を出力</td></tr>
+        <tr><td>clear</td><td>コンソール内をクリア</td></tr>
+        <tr><td>time</td><td>タイマー計測を開始</td></tr>
+        <tr><td>timerEnd</td><td>タイマー計測を終了</td></tr>
+        <tr><td>timeStamp</td><td>メソッド実行時の時間をlogに出力</td></tr>
+        <tr><td>markTimeLine</td><td><タイムラインビュー上でメソッドが呼ばれたポイントに、引数で渡されたラベルを表示する/td></tr>
+        <tr><td>profile</td><td>プロファイルを開始</td></tr>
+        <tr><td>profileEnd</td><td>プロファイルを終了</td></tr>
+        <tr><td>group</td><td>グループ表示を開始(展開された状態)</td></tr>
+        <tr><td>groupCollapsed</td><td>グループ表示を開始(折り畳まれた状態)</td></tr>
+        <tr><td>groupEnd</td><td>グループ表示を終了</td></tr>
+        <tr><td>debug</td><td>オブジェクトの中身を文字列として展開</td></tr>
+    </table></center>
+    
+    <p>
+    <br>覚えることがたくさんありすぎます。</p>
+    
+    
+
+    <p id="choi">皆さんも色んなconsoleオブジェクトを使って理解を深めましょう！！！！</p>
+
+
+    <script>
+            document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById('osusi').addEventListener('change',function(){
+        　　location.href = 'https://terufotball417soccer.github.io/'+ this.value;
+        },false);
+            },false);
+
+
+       </script>   
+</body>
+</html>

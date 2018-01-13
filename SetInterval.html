@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "utf-8">
+    <title>JavaScriptの練習</title>
+  </head>
+  <body>
+      <script>
+          var count = 0;
+          var countup = function(){
+            console.log(count++);
+          }
+          var id = setInterval(function(){
+            countup();
+            if(count > 5){　
+              clearInterval(id);　//idをclearIntervalで指定している
+            }}, 1000);
+        </script>
+     
+    </script>
+  </body>
+</html>
