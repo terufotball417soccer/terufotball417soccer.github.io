@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQueryサンプル図鑑</title>
+    <link rel="stylesheet" href="jQuerySamplecss.css">
+    </head>
+   
+<body>
+    <header id="star1">
+        jQueryサンプル図鑑!
+    </header>
+        <h1>１つ目はマウスオーバーをすると画像が半透明になる</h1>
+        <p>jQueryで書くとこうなります。</p>
+        <div class="oc"></div>
+        <pre>
+                
+         $(function(){                        
+         $(".oc").hover(function(){
+        //$(a img).hover(function(){ ←すべてのリンク付き画像に適応
+         $(this).fadeTo("normal", 0.6); // マウスオーバーで透明度を60%にする
+         },function(){
+         $(this).fadeTo("normal", 1.0); // マウスアウトで透明度を100%に戻す
+         });
+        });
+                    </pre>
+       
+        
+        <h1>２つ目はアコーディオンメニューです</h1>
+        <p>jQueryで書くとこうなります。</p>
+        <pre>
+
+                $(function() {
+                    $('#accordion dd').hide();
+                    $('#accordion dt a').click(function(){
+                         $('#accordion dd').slideUp();
+                         $(this).parent().next().slideDown();
+                         return false;
+                     });
+                });
+        </pre>
+        
+        <dl id="accordion">
+                <dt><a href="">メニュー1</a></dt>
+                <dd>
+                    <a href="#">サブメニュー1-1</a>
+                    <a href="#">サブメニュー1-2</a>
+                </dd>
+                <dt><a href="">メニュー2</a></dt>
+                <dd>
+                    <a href="#">サブメニュー2-1</a>
+                    <a href="#">サブメニュー2-2</a>
+                </dd>
+                <dt><a href="">メニュー3</a></dt>
+                <dd>
+                    <a href="#">サブメニュー3-1</a>
+                    <a href="#">サブメニュー3-2</a>
+                </dd>
+            </dl>
+            <p>サブメニューがあるときに便利ですね。</p>
+            <h1>３つ目はタブパネルです</h1>
+            <p>jQueryで書くとこうなります。</p>
+            <pre>
+
+                    $(function(){
+                        $(".open").click(function(){
+                            $("#slideBox").slideToggle("slow");
+                        });
+                    });
+            </pre>
+            <ul id="tabs">
+                    <li><a href="#tab01">タブ1</a></li>
+                    <li><a href="#tab02" >タブ2</a></li>
+                    <li><a href="#tab03" >タブ3</a></li>
+                    </ul>
+                     
+                    <div id="tab01" class="panel">内容1です。jQueryってとっても便利ですよね。簡単にいろんな動きが実装できるし、クロスブラウザにもなるし。ほんとうに素晴らしいです。</div>
+                    <div id="tab02" class="panel">内容2です。簡単なコードなら、自分で書けるようになるとより便利です。CSSのセレクタを利用するので、コーダーやWebデザイナーにもやさしいです。</div>
+                    <div id="tab03" class="panel">内容3です。最近は、jQuery Mobileも登場していますね。ある程度カスタマイズもできるので、時間がないときは利用すると、すばやくスマートフォン用のサイトが作れます。でも、フルカスタマイズするとなると、1から作ったほうが早い場合もあるようなので、使いどころを見極めることが重要です。</div>
+                    <p>よくあるタブ切り替えUIですがjavasceiptでも実装できるのですがjQueryだとより短いコードで書けることからいいところですね！<br>
+                        <br>
+                        <h1>引用場所</h1>
+                            <a href="http://happymondays.pecori.jp/jquery-sample/#">http://happymondays.pecori.jp/jquery-sample/#</a>
+                    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+
+<script>
+
+    //ここから１つ
+    $(function(){
+$(".oc").hover(function(){
+//$(a img).hover(function(){ ←すべてのリンク付き画像に適応
+    $(this).fadeTo("normal", 0.6); // マウスオーバーで透明度を60%にする
+    },function(){
+    $(this).fadeTo("normal", 1.0); // マウスアウトで透明度を100%に戻す
+    });
+});
+
+//ここまで１つ
+//ここから2つ
+$(function() {
+    $('#accordion dd').hide();
+    $('#accordion dt a').click(function(){
+         $('#accordion dd').slideUp();
+         $(this).parent().next().slideDown();
+         return false;
+     });
+});
+//ここまで２つ
+//ここから３つ
+$(function(){
+    $(".panel:not(:first)").hide();
+    $("#tabs a").click(function() {
+        $(".panel").hide();
+        $(".panel").filter(this.hash).show();
+        $("#tabs a").removeClass("selected");
+        $(this).addClass("selected");
+        return false;
+        }).filter(":first").click();
+});
+//ここから３つまで
+
+</script>
+</body>
+</html>

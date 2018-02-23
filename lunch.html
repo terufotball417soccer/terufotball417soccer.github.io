@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ランチメニュー</title>
+</head>
+
+<body>
+    <form name="Sample3_form" action="form_sample3.html">
+        <table border="2">
+            <tr>
+                <th>
+                    <p>ご注文はなんでしょうか？</p>
+                    <input type="radio" name="radio" value="蒙古タンメン" />蒙古タンメン
+                    <br>
+                    <input type="radio" name="radio" value="一楽ラーメン" />一楽ラーメン
+                    <br>
+                    <input type="radio" name="radio" value="節骨ラーメン" />節骨ラーメン
+                    <br>
+                </th>
+            </tr>
+        </table>
+        <table border="2">
+            <tr>
+                <th>
+                    <p>オプションはなんでしょうか？</p>
+                    <input type="checkbox" name="check" />大盛り
+                    <br>
+                    <input type="checkbox" name="check" />チャーシュー飯
+                    <br>
+                    <input type="checkbox" name="check" />半チャーハン </br>
+                    <input type="checkbox" name="check" />餃子 </th>
+            </tr>
+        </table>
+        <input type="button" value="注文する" onclick="Sample3()">
+        </tr>
+    </form>
+    <script>
+        var time = "";
+        function Sample3() {
+
+            if (document.cookie == false) {
+
+                for (var i = 0; i < Sample3_form.radio.length; i++) {
+                    if (Sample3_form.radio[i].checked == true) {
+                        var hoge = Sample3_form.radio[i].value;
+                        var hage = "";
+
+                        var oomori = Sample3_form.check[0].checked;
+                        var cya = Sample3_form.check[1].checked;
+                        var hann = Sample3_form.check[2].checked;
+                        var gyou = Sample3_form.check[3].checked;
+
+                        if (oomori == true) {
+                            hage = hage + "と大盛";
+                        }
+                        if (cya == true) {
+                            hage = hage + "とチャーシュー飯";
+                        }
+                        if (hann == true) {
+                            hage = hage + "と半チャーハン";
+                        }
+                        if (gyou == true) {
+                            hage = hage + "と餃子";
+                        }
+                        alert(hoge + hage + "ですね？");
+                        document.cookie = hoge + hage + ";max-age=10;path=/";
+                        time = setInterval("count()", 120000);
+                    }
+
+                }
+            } else {
+                alert("お客様は注文済みです。" + "\n" + document.cookie + "です。" + "\n" + "少々お待ちください。");
+            }
+        }
+        
+        function count() {
+                alert("お待ちどうさま！");
+                clearInterval(time);
+            
+        }
+
+    </script>
+</body>
+
+</html>

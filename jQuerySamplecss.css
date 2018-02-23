@@ -1,0 +1,39 @@
+@charset "utf-8";
+body{
+   text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #5555ff50;
+}
+
+header{
+    font-size: 50px;
+   
+    width: auto;
+    height: 100px;
+    background-color: #00000050;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: green;
+}
+ul{
+    list-style-type: none;
+}
+
+pre{
+    text-align: left;
+    background-color: #333333;
+    color: white;
+    width: 800px;
+    margin: auto;
+}
+.oc{
+    width: 60px;
+    height:60px;
+    margin: auto;
+    background-color: red;
+}
