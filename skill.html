@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My web site</title>
+    </head>
+    <style>
+            #pozi{
+                color:white;
+                font-size: 30px;
+            }
+            </style>
+    <body background="images/boll2.jpg"></body>
+	<link rel="stylesheet" type="text/css" href="web.css">
+</head>
+<body>
+        <header id="global-head">
+                <h1 id="brand-logo">Logo</h1>
+            </header>
+             
+            <div id="nav-toggle">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+             
+            <aside id="sidebar">
+                <nav id="global-nav">
+                    <ul>
+                        <li><a href="index2.html">Home</a></li>
+                        
+                        <li class="sub-menu">
+                            <a href="#" class="sub-menu-head">自己紹介</a>
+                            <ul class="sub-menu-nav">
+                                <li><a href="skill.html">趣味</a></li>
+                                <li><a href="about.html">自己紹介詳細</a></li>
+                                <li><a href="soccer.html">好きなサッカー選手</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </aside>
+             
+            <main id="main">
+                <div id="main-in">
+                    <div id="main-visual">
+                        <h2>Fixed Sidebar</h2>
+                    </div>
+                </div><!-- /#main-in -->
+            </main>
+             
+            <div id="overlay"></div>
+
+                    <article>
+                    <h1>趣味</h1>
+                    <p>フットサル、サッカー観戦、サイクリングです</p>
+                    <h1>好きな食べ物</h1>
+                    <dd>
+                    <ul>
+                    <li>1位ラーメン</li>
+                    <li>2位焼きそば</li>
+                    <li>3位メロンパン</li>
+                    </ul>
+                    </dd>
+                    </dl>
+                     
+                    <dl>
+                    <h1>休日の過ごし方</h1>
+                    <dd>
+                    <ul>
+                    <li>主にフットサルをしたり、バイトをして過ごしている。<br>
+                        天気のいい日はサイクリングをしたりして休日を過ごしている。
+                    </li>
+                    </ul>
+                    </dd>
+                    </dl>
+                     
+                    <dl>
+                    <h1>これからやっていきたいこと</h1>
+                    <dd>
+                    <ul>
+                    <li>これまでフットサルをはじめ自分の趣味の時間があまりとれてなかったので趣味の時間を増やしていきたい</li>
+                    <li>学生のうちに受けられる資格を受けて取得できるようにしたい</li>
+                    <li>あと一年で社会にでるので社会に出でも恥ずかしくないような生活をしていきたい</li>
+                    </ul>
+                    </dd>
+                    </dl>
+                    
+                        </article>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+            <script type="text/javascript">
+            (function($) {
+                $(function () {
+                    $('.sub-menu').on({
+                        'mouseenter': function () {
+                            $(this).addClass('is-active');
+                        },
+                        'mouseleave': function () {
+                            $(this).removeClass('is-active');
+                        }
+                    });
+                    $('#nav-toggle,#overlay').on('click', function() {
+                        $('body').toggleClass('open');
+                    });
+                });
+            })(jQuery);
+            </script>
+</body>
+</html>
