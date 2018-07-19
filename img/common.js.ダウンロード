@@ -1,0 +1,70 @@
+//header 横スクロール
+$(window).on("scroll", function(){
+    $("header").css("left", -$(window).scrollLeft());
+});
+
+//nav 現在地にclassを付与
+$(document).ready(function() {
+  if(location.pathname != "/") {
+    $('#gnav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+  } else $('#gnav a:eq(0)').addClass('active');
+});
+
+//nav ドロップダウン
+$(function(){
+    $('nav li').hover(function(){
+        $("div:not(:animated)", this).slideDown('fast');
+		  $(this).addClass("on");
+    }, function(){
+        $(".child",this).slideUp('fast');
+		  $(this).removeClass("on");
+    });
+});
+
+
+//oc　日程
+$(function(){
+	
+	// JSON解析
+	function loadJson(json){
+		
+		var datas = json.dates;
+		var dateObj = new Date();
+		var days = ["日", "月", "火", "水", "木", "金", "土"];
+
+		for(var i=0; i<datas.length; i++){
+			var schedule = new Date(datas[i].date);
+			if(dateObj < schedule){
+				var date = datas[i].date;
+				var index = date.indexOf("/")+1;
+				$(".schedule").text(date.slice(index, date.length));
+				$(".week").text("("+ days[schedule.getDay()] +")");
+				break;
+			}
+			
+		}
+	}
+	
+	// 外部読み込み
+	$(document).ready(function(){
+		$(function(){
+			// 外部読み込みする場合
+			$.ajax({
+				url: "/common/js/schedule_oc.json",
+				type: "GET",
+				dataType: "json",
+				async: true,  
+				cache: false,
+				error:function(){
+					alert("JSON load error");  
+				},
+				success:loadJson
+			});
+		});
+	});
+	
+});
+
+
+
+
