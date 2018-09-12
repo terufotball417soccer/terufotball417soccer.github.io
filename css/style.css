@@ -48,7 +48,7 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	background: url(../images/IMG_0180.JPG) no-repeat right bottom;	/*背景画像（古いブラウザ用）*/
-	background: url(../images/IMG_0180.JPG) no-repeat left top / 100%, url(../images/bg_main.jpg) no-repeat right bottom / cover;	/*背景画像*/
+	background: url(../images/IMG_0180.JPG) no-repeat left top / 100%, url(../images/IMG_0180.JPG) no-repeat right bottom / cover;	/*背景画像*/
 }
 #mainimg1 {
 	text-indent: -9999px;
@@ -56,7 +56,7 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	background: url(../images/soccer.jpeg) no-repeat right bottom;	/*背景画像（古いブラウザ用）*/
-	background: url(../images/soccer.jpeg) no-repeat left top / 100%, url(../images/bg_main.jpg) no-repeat right bottom / cover;	/*背景画像*/
+	background: url(../images/soccer.jpeg) no-repeat left top / 100%, url(../images/soccer.jpeg) no-repeat right bottom / cover;	/*背景画像*/
 }
 #mainimg2 {
 	text-indent: -9999px;
@@ -64,7 +64,7 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	background: url(../images/IMG_0100.JPG) no-repeat right bottom;	/*背景画像（古いブラウザ用）*/
-	background: url(../images/IMG_0100.JPG) no-repeat left top / 100%, url(../images/bg_main.jpg) no-repeat right bottom / cover;	/*背景画像*/
+	background: url(../images/IMG_0100.JPG) no-repeat left top / 100%, url(../images/IMG_0100.JPG) no-repeat right bottom / cover;	/*背景画像*/
 }
 #mainimg3 {
 	text-indent: -9999px;
@@ -72,7 +72,7 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	background: url(../images/IMG_0215.JPG) no-repeat right bottom;	/*背景画像（古いブラウザ用）*/
-	background: url(../images/IMG_0215.JPG) no-repeat left top / 100%, url(../images/bg_main.jpg) no-repeat right bottom / cover;	/*背景画像*/
+	background: url(../images/IMG_0215.JPG) no-repeat left top / 100%, url(../images/IMG_0215.JPG) no-repeat right bottom / cover;	/*背景画像*/
 }
 /*ヘッダー
 ---------------------------------------------------------------------------*/
