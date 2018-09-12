@@ -2,26 +2,83 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>100から0</title>
-
-</head>
-<body>
-<p>選択してください</p>
-<form>
-<select>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>自己紹介</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fixmenu_pagetop.css">
+<script type="text/javascript" src="js/openclose.js"></script>
+<script type="text/javascript" src="js/fixmenu_pagetop.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
-var i;
-
-for(i=100; i>=0; i-=5){
-document.write('<option value="'+i+'">'+i+'個です</option>');
-}
-
-
+$(function(){
+$('a[href^="#"]').click(function() {
+var speed = 800;
+var href= $(this).attr("href");
+var target = $(href == "#" || href == "" ? 'html' : href);
+var position = target.offset().top;
+$('body,html').animate({scrollTop:position}, speed, 'swing');
+return false;
+});
+});
 </script>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="mainimg">メインイメージ</div>
+
+<header>
+
+<h1 id="logo"><a href="kadai.html"><img src="images/toumei.jpg" alt="Sample Site"></a></h1>
+<!--PC用（801px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+<li id="menu1"><a href="syumi.html"><img src="images/book.jpg" alt="趣味・特技"></a></li>
+<li id="menu2"><a href="can.html"><img src="images/images.jpg" alt="自分にできること"></a></li>
+<li id="menu3"><a href="link.html"><img src="images/menu_link.png" alt="リンク"></a></li>
+<li id="menu4"><a href="#"><img src="images/menu_instagram.png" alt="インスタグラム"></a></li>
+</ul>
+</nav>
+
+</header>
+
+<div class="contents bg1"><!--contentsブロック開始＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+
+<section>
+
+<h2>Read Me<span>自己紹介について</span></h2>
+
+<h3>自己紹介とこれまでの生い立ち</h3>
+<p>現在は盛岡情報ビジネス専門学校　WWEBネットワーク科アプリケーションコース２年生です。
+</p>
+<p>小学校は、本宮小学校で中学校は大宮中学校、高校は盛岡市立高等学校でした。</p>
+<p>盛岡情報ビジネス専門学校では、情報系の勉強をしています。<br>
+
+</section>
+
+</div>
+<!--/contents-->
 
 
-</select>
 
-</form>
+<footer>
+<small>Copyright&copy; <a href="kadai.html">Sample Site</a> All Rights Reserved.</small>
+<span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+</div>
+<!--/container-->
+
 </body>
 </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>自己紹介</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fixmenu_pagetop.css">
+<script type="text/javascript" src="js/openclose.js"></script>
+<script type="text/javascript" src="js/fixmenu_pagetop.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(function(){
+$('a[href^="#"]').click(function() {
+var speed = 800;
+var href= $(this).attr("href");
+var target = $(href == "#" || href == "" ? 'html' : href);
+var position = target.offset().top;
+$('body,html').animate({scrollTop:position}, speed, 'swing');
+return false;
+});
+});
+</script>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="mainimg1">メインイメージ</div>
+
+<header>
+
+<h1 id="logo"><a href="kadai.html"><img src="images/toumei.jpg" alt="Sample Site"></a></h1>
+<!--PC用（801px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+<li id="menu1"><a href="syumi.html"><img src="images/book.jpg" alt="趣味・特技"></a></li>
+<li id="menu3"><a href="link.html"><img src="images/menu_link.png" alt="リンク"></a></li>
+<li id="menu2"><a href="can.html"><img src="images/images.jpg" alt="自分にできること"></a></li>
+<li id="menu4"><a href="#"><img src="images/menu_instagram.png" alt="インスタグラム"></a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<div class="contents bg2" id="about"><!--contentsブロック開始＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+
+<section>
+
+<h2>Hobby<span>趣味・特技について</span></h2>
+
+<h3>趣味の紹介</h3>
+<p>趣味は、小学校からやってきたサッカーです。現在は、社会人のチームでフットサルをしていてリーグ戦にもでています。するほかにも観戦をすることも好きです。<br>
+他には、サイクリングやカフェ巡りも好きでよく一人で盛岡のカフェを調べたりしていってみたりすることがあります。<br>
+サイクリングだけではなく車を持っているのでドライブをしたりして自転車では遠くて行けないところにも車で行ったりして休日は過ごしています。</p>
+
+<h3>特技の紹介</h3>
+<p>特技はこれと言ってありませんが、サッカーをしていたり現在もフットサルをしているので主に体を動かすことが得意です。<br>
+基本的にインドア派ではなくアウトドア派なので外でなにかをするのが好きなのとスポーツをするのが好きです。</p>
+
+</section>
+
+</div>
+<!--/contents-->
+
+
+
+<footer>
+<small>Copyright&copy; <a href="kadai.html">Sample Site</a> All Rights Reserved.</small>
+<span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+</div>
+<!--/container-->
+
+</body>
+</html>
