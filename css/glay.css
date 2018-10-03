@@ -1,0 +1,313 @@
+/*- Sam Glay CSS ---------------------------------------------*/
+
+
+/*- Basic Style ----------------------------------------------*/
+
+body{
+	background:#8E8E8E url(/sys-html/images/formwiz/sam/glay_back.gif) repeat;
+	width:600px;
+	margin:0px auto 0px auto;
+	padding:0px;
+	text-align:center;
+	color:#000000;
+}
+
+
+
+/*- Box Style ------------------------------------------------*/
+
+#all{
+	width:600px;
+	margin:0px;
+	padding:0px;
+	text-align:left;
+}
+
+#title{
+	background:#FFFFFF url(/sys-html/images/formwiz/sam/glay_center.gif) repeat-y;
+	widht:600px;
+	margin:0px;
+	padding:0px;
+}
+
+#title_top{
+	background:#8E8E8E url(/sys-html/images/formwiz/sam/glay_top.gif) no-repeat 0px bottom;
+	width:600px;
+	height:13px;
+	margin:20px 0px 0px 0px;
+	padding:0px;
+}
+
+#title_middle{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+#title_bottom{
+	background:#FFFFFF url(/sys-html/images/formwiz/sam/glay_center.gif) repeat-y;
+	margin:0px;
+	padding:0px;
+}
+
+#main{
+	background:#FFFFFF url(/sys-html/images/formwiz/sam/glay_center.gif) repeat-y;
+	margin:0px;
+	padding:0px;
+}
+
+#main_top{
+	background:#FFFFFF url(/sys-html/images/formwiz/sam/glay_center.gif) repeat-y;
+	widht:600px;
+	height:1px;
+	margin:0px;
+	padding:0px;
+}
+
+#main_middle{
+	margin:0px 20px 0px 20px;
+	padding:0px;
+}
+
+#main_bottom{
+	background:#8E8E8E url(/sys-html/images/formwiz/sam/glay_bottom.gif) no-repeat;
+	width:600px;
+	height:13px;
+	margin:0px;
+	padding:0px;
+}
+
+div.necessary{
+	width:100%;
+	margin:0px auto 0px auto;
+	padding:0px;
+	text-align:center;
+	font-size:10pt;
+}
+
+#block{
+	width:100%;
+	margin:0px auto 0px auto;
+	padding:0px;
+	text-align:center;
+}
+
+#submit{
+	width:100%;
+	margin:20px auto 0px auto;
+	padding:0px;
+	text-align:center;
+}
+
+
+div.confirm_title{
+	width:100%;
+	margin:0px auto 0px auto;
+	padding:0px;
+}
+
+#confirm_submit{
+	width:100%;
+	margin:20px auto 0px auto;
+	padding:0px;
+	text-align:center;
+}
+
+
+#completion_block{
+	width:100%;
+	margin:0px auto 0px auto;
+	padding:10px 0px 0px 0px;
+	text-align:center;
+}
+
+div.completion_title{
+	width:100%;
+	margin:0px auto 2px auto;
+	padding:10px 0px 10px 0px;
+	text-align:center;
+}
+
+#completion_submit{
+	width:100%;
+	margin:20px auto 0px auto;
+	padding:0px 0px 10px 0px;
+	text-align:center;
+}
+
+
+#error_block{
+	width:100%;
+	margin:0px auto 0px auto;
+	padding:10px 0px 0px 0px;
+	text-align:center;
+}
+
+div.error_title{
+	width:100%;
+	margin:0px auto 2px auto;
+	padding:10px 0px 10px 0px;
+	text-align:center;
+}
+
+#error_submit{
+	width:100%;
+	margin:20px auto 0px auto;
+	padding:0px 0px 10px 0px;
+	text-align:center;
+}
+
+
+
+/*- Table Style ----------------------------------------------*/
+
+table{
+	width: 100%;
+	margin:0px;
+	padding:0px;
+	border-collapse:collapse;
+}
+
+td.table_left{
+	width:30%;
+	margin:0px;
+	padding:5px;
+	text-align:left;
+	border-top:none;
+	border-right:none;
+	border-bottom:1px dotted #8FC31F;
+	border-left:none;
+}
+
+td.table_right{
+	width:70%;
+	margin:0px;
+	padding:10px 5px 10px 5px;
+	text-align:left;
+	border-top:none;
+	border-right:none;
+	border-bottom:1px dotted #8FC31F;
+	border-left:none;
+}
+
+
+
+/*- Font Style -----------------------------------------------*/
+
+h1{
+	background:url(/sys-html/images/formwiz/sam/glay_title.gif) no-repeat 0px 15px;
+	width:564px;
+	height:25px;
+	margin:20px 0px 0px 15px;
+	padding:0px 0px 0px 10px;
+	font-size:12pt;
+	text-align:left;
+}
+
+h2.confirm_title{
+	margin:10px;
+	padding:0px;
+	font-size:12pt;
+	color:#486A00;
+}
+
+h2.completion_title{
+	margin:0px;
+	padding:0px;
+	font-size:12pt;
+	color:#486A00;
+}
+
+h2.error_title{
+	margin:0px;
+	padding:0px;
+	font-size:12pt;
+	color:#486A00;
+}
+
+p.item{
+	margin:0px;
+	padding:0px;
+	font-size:10pt;
+}
+
+p.necessary{
+	margin:0px;
+	padding:0px;
+	color:#486A00;
+}
+
+p.answer{
+	margin:0px;
+	padding:0px;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+#confirm_message{
+	margin:0px 0px 10px 0px;
+	padding:0px;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+#completion_message{
+	margin:0px 0px 10px 0px;
+	padding:0px;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+#error_message{
+	margin:0px;
+	padding:0px;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+.necessary{
+	color:#486A00;
+}
+
+
+
+/*- Form Style -----------------------------------------------*/
+
+input.text{
+	width:100%;
+}
+
+input.password{
+	width:100%;
+}
+
+textarea.textarea{
+	width:100%;
+	height:10em;
+}
+
+input.post-left{
+	width:4em;
+}
+
+input.post-right{
+	width:5em;
+}
+
+input.post-add{
+	width:100%;
+	margin:3px 0px 3px 0px;
+}
+
+input.name{
+	width:8em;
+}
+
+input.tel{
+	width:6em;
+}
+
+input.mail{
+	width:100%;
+	margin:3px 0px3px 0px;
+}

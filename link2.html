@@ -1,69 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>自己紹介</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ここにサイト説明を入れます">
-<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/fixmenu_pagetop.css">	<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<title>サンプルお問い合わせフォーム</title>
-<link rel="stylesheet" type="text/css" href="/sys-html/css/formwiz/sam/glay.css">
-<script type="text/javascript" src="js/openclose.js"></script>
-<script type="text/javascript" src="js/fixmenu_pagetop.js">
-</script>
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
-$(function(){
-$('a[href^="#"]').click(function() {
-var speed = 800;
-var href= $(this).attr("href");
-var target = $(href == "#" || href == "" ? 'html' : href);
-var position = target.offset().top;
-$('body,html').animate({scrollTop:position}, speed, 'swing');
-return false;
-});
-});
-
-</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+	<title>サンプルお問い合わせフォーム</title>
+	<link rel="stylesheet" type="text/css" href="/sys-html/css/formwiz/sam/glay.css">
 </head>
-
-<body>
-
-<div id="container">
-
-<div id="mainimg3">メインイメージ</div>
-
-<header>
-
-<h1 id="logo"><a href="kadai.html"><img src="images/toumei.jpg" alt="Sample Site"></a></h1>
-<!--PC用（801px以上端末）メニュー-->
-<nav id="menubar">
-<ul>
-<li id="menu1"><a href="syumi.html"><img src="images/book.jpg" alt="趣味・特技"></a></li>
-<li id="menu3"><a href="link.html"><img src="images/menu_link.png" alt="リンク"></a></li>
-<li id="menu2"><a href="can.html"><img src="images/images.jpg" alt="自分にできること"></a></li>
-<li id="menu4"><a href="insta.html"><img src="images/menu_instagram.png" alt="インスタグラム"></a></li>
-</ul>
-</nav>
-
-</header>
-
-<div class="contents bg4" id="link"><!--contentsブロック開始＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝-->
-
-<section>
-
-<h2>link</h2>
-
-<table class="ta1">
-<!--/contents-->
-<!--/container-->
 <body>
 <form method="POST" action="/sys-html/cgi-bin/formwiz.cgi">
 <input type="hidden" name="formid" value="Vs6Z7bTeUAYAAT8LiZE398">
@@ -71,7 +13,7 @@ return false;
 <div id="all">
 	<div id="title">
 		<div id="title_top"></div>
-		<div id="title_middle"><h1>お問い合わせフォーム</h1></div>
+		<div id="title_middle"><h1>サンプルお問い合わせフォーム</h1></div>
 		<div id="title_bottom"></div>
 	</div>
 	<div id="main">
@@ -98,7 +40,7 @@ return false;
 					</tr>
 					
 					<tr>
-					<td class="table_left">送付先住所<span class="necessary">※</span></td>
+					<td class="table_left">ｻﾝﾌﾟﾙ送付先住所<span class="necessary">※</span></td>
 					<td class="table_right">〒<input type="text" name="contents3" class="post-left">-<input type="text" name="contents3" class="post-right"><br><input type="text" name="contents3" class="post-add"></td>
 					</tr>
 					
@@ -115,6 +57,12 @@ return false;
 					<tr>
 					<td class="table_left">ご希望のサンプルにチェックをお願いします</td>
 					<td class="table_right"><input type="checkbox" name="contents6" value="銅箔糸">銅箔糸 
+<input type="checkbox" name="contents6" value="極細導体">極細導体 
+<input type="checkbox" name="contents6" value="圧延銅箔">圧延銅箔 
+<input type="checkbox" name="contents6" value="スピーカー用リード線">スピーカー用リード線 
+<input type="checkbox" name="contents6" value="電子機器用リード線">電子機器用リード線 
+<input type="checkbox" name="contents6" value="各種自動機">各種自動機 
+<input type="checkbox" name="contents6" value="その他">その他 </td>
 					</tr>
 					
 					<tr>
@@ -130,9 +78,8 @@ return false;
 			</div>
 		</div>
 		<div id="main_bottom"></div>
-    </div>
-
-</form>
+	</div>
 </div>
+</form>
 </body>
 </html>
