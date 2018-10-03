@@ -25,7 +25,7 @@ body{
 
 #title{
 	background:#FFFFFF url(/sys-html/images/formwiz/sam/glay_center.gif) repeat-y;
-	widht:600px;
+    width:600px;
 	margin:0px;
 	padding:0px;
 }
@@ -58,7 +58,7 @@ body{
 
 #main_top{
 	background:#FFFFFF url(/sys-html/images/formwiz/sam/glay_center.gif) repeat-y;
-	widht:600px;
+	width:600px;
 	height:1px;
 	margin:0px;
 	padding:0px;
